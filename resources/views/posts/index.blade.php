@@ -16,6 +16,7 @@
         <div class="card p-2" id="hidden" style="display: none">
             @include('posts.create')
         </div>
+        @if (count($posts) !=0)
         <table class="table">
             <thead class="text-center">
                 <tr>
@@ -37,13 +38,18 @@
                             @method('DELETE')
                             <a href="{{ route('post.show',$post->id) }}" class="btn btn-sm btn-outline-info">View</a>
                             <a href="{{ route('post.edit',$post->id) }}" class="btn btn-sm btn-outline-primary">Edit</a>
-                            <a href="{{ route('post.destroy',$post->id) }}" class="btn btn-sm btn-outline-danger">Delete</a>
+                            <button class="btn btn-sm btn-outline-danger">Delete</button>
                         </form>
                     </td>
                 </tr>
                 @endforeach
             </tbody>
         </table>
+        @else
+        <div class="text-center">
+            <h3>No datas collection</h3>
+        </div>
+        @endif
     </div>
     <br/>
     <div class="link">{{ $posts->links() }}</div>
