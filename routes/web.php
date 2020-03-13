@@ -12,4 +12,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('post','PostController');
+Route::get('/',function (){
+   return view('welcome');
+});
+
+Route::group([
+    'moddleware'=>'auth'
+],function (){
+    Route::resource('post','PostController');
+});
+
+Auth::routes();
+
+Route::get('/home', 'PostController@index')->name('home');

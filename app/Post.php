@@ -7,4 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     protected $guarded = [];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class,'user_id');
+    }
+    public function category()
+    {
+        return $this->hasOne(Category::class,'id','category_id');
+    }
 }

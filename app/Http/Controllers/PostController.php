@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    protected $model;
+
+    public function __contructor(Post $post){
+        $this->model = $post;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +19,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('posts.index');
+        return view('layouts.posts.index');
     }
 
     /**
@@ -39,6 +44,7 @@ class PostController extends Controller
            'title'=>'required',
            'body'=>'required'
         ]);
+        $request->request->add(['user_id' => $request->user()->id]); //add request
         Post::create($request->all());
         return redirect()->back()->with('success',"Post $request->title success!!!");
     }
@@ -51,7 +57,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return view('posts.show',compact('post'));
+        return view('layouts.posts.show',compact('post'));
     }
 
     /**
@@ -62,7 +68,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view('posts.edit',compact('post'));
+        return view('layouts.posts.edit',compact('post'))->with('success',"Post $post->title Edit!");
     }
 
     /**
@@ -85,12 +91,13 @@ class PostController extends Controller
      * Remove the specified resource from storage.
      *
      * @param \App\Post $post
-     * @return bool
+     * @return \Illuminate\Http\RedirectResponse
      * @throws \Exception
      */
     public function destroy(Post $post)
     {
         $post->delete();
-        return view('posts.index');
+        return redirect()->back()->with('success',"Post $post->title Deleted!");
+//        return view('layouts.posts.index');
     }
 }
