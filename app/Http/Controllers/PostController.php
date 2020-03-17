@@ -15,21 +15,11 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()
     {
         return view('layouts.posts.index');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
     }
 
     /**
@@ -98,6 +88,5 @@ class PostController extends Controller
     {
         $post->delete();
         return redirect()->back()->with('success',"Post $post->title Deleted!");
-//        return view('layouts.posts.index');
     }
 }

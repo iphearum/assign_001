@@ -22,6 +22,4 @@ Route::group([
     Route::resource('post','PostController');
 });
 
-Auth::routes();
-
 Route::get('/home', 'PostController@index')->name('home');
