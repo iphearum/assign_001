@@ -15,7 +15,7 @@
 |POST|api/post|post.store|App\Http\Controllers\APIs\PostController@store|api|
 |GET|api/post/create|post.create|App\Http\Controllers\APIs\PostController@create|api|
 |GET|api/post/{post}|post.show|App\Http\Controllers\APIs\PostController@show|api|
-|PUT|PATCH|api/post/{post}|post.update|App\Http\Controllers\APIs\PostController@update|api|
+|PUT/PATCH|api/post/{post}|post.update|App\Http\Controllers\APIs\PostController@update|api|
 |DELETE|api/post/{post}|post.destroy|App\Http\Controllers\APIs\PostController@destroy|api|
 |GET|api/post/{post}/edit|post.edit|App\Http\Controllers\APIs\PostController@edit|api|
 |GET|home|home|App\Http\Controllers\PostController@index|web|
@@ -23,6 +23,6 @@
 |POST|post|post.store|App\Http\Controllers\PostController@store|web|
 |GET|post/create|post.create|App\Http\Controllers\PostController@create|web|
 |GET|post/{post}|post.show|App\Http\Controllers\PostController@show|web|
-|PUT|PATCH|post/{post}|post.update|App\Http\Controllers\PostController@update|web|
+|PUT/PATCH|post/{post}|post.update|App\Http\Controllers\PostController@update|web|
 |DELETE|post/{post}|post.destroy|App\Http\Controllers\PostController@destroy|web|
 |GET|post/{post}/edit|post.edit|App\Http\Controllers\PostController@edit|web|
