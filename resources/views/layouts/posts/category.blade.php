@@ -12,7 +12,7 @@
         <a href="{{ url('post') }}" class="btn btn-sm btn-outline-primary mb-2">Back</a>
         <button onclick="show_post()" class="btn btn-primary float-right mt-2">Post</button>
         <div class="title">
-            <h1>List Post by {{ $postsc[0]->category->name }}</h1>
+            <h1>List Category: {{ $postsc[0]->category->name }}</h1>
         </div>
         <div class="card">
             @if (count($postsc) !=0)
