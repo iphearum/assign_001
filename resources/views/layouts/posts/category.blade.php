@@ -9,24 +9,13 @@
                 </div>
             @endif
         </div>
+        <a href="{{ url('post') }}" class="btn btn-sm btn-outline-primary mb-2">Back</a>
         <button onclick="show_post()" class="btn btn-primary float-right mt-2">Post</button>
         <div class="title">
-            <h1>List Post</h1>
-        </div>
-        <div>
-        Categories
-        <ul class="p-0">
-            @foreach ($categories as $category)
-                <li class="float-left btn btn-outline-info text-blue mr-2"><a href="/category/{{$category->id}}">{{$category->name}}</a></li>
-            @endforeach
-        </ul>
-        </div>
-        <br>
-        <div class="card p-2" id="hidden" style="display: none">
-            @include('layouts.posts.create')
+            <h1>List Post by {{ $postsc[0]->category->name }}</h1>
         </div>
         <div class="card">
-            @if (count($posts) !=0)
+            @if (count($postsc) !=0)
                 <table class="table">
                     <thead class="text-center">
                     <tr>
@@ -38,8 +27,8 @@
                         <th scope="col" width="180">action</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    @foreach($posts as $key => $post)
+                    <tbody>    
+                    @foreach($postsc as $key => $post)
                         <tr>
                             <td>{{ $key }}</td>
                             <td>{{ $post->title }}</td>
@@ -68,7 +57,7 @@
             @endif
         </div>
         <br/>
-        <div class="link">{{ $posts->links() }}</div>
+        <div class="link">{{ $postsc->links() }}</div>
     </div>
     <script>
         function show_post() {

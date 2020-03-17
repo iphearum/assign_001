@@ -10,16 +10,16 @@ class Category extends Model
 
     public function chailds()
     {
-        return $this->hasMany(Category::class,'parent_id');
+        return $this->hasMany(Category::class, 'parent_id');
     }
 
     public function parent()
     {
         return $this->belongsTo(Category::class);
     }
+
     public function post()
     {
-        return $this->belongsTo(Category::class);
+        return $this->hasMany(Post::class);
     }
-
 }

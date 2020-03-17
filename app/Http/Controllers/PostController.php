@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -75,6 +76,11 @@ class PostController extends Controller
         }
         $post->update($request->all());
         return redirect()->back();
+    }
+
+    public function category($id){
+        $postsc = Post::where('category_id',$id)->paginate(3);
+        return view('layouts.posts.category',compact('postsc'));
     }
 
     /**
