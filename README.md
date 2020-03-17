@@ -1,13 +1,13 @@
-<palign="center"><imgsrc="<https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg"width="400">></p>
+<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
-<palign="center">
-<ahref="<https://travis-ci.org/laravel/framework"><imgsrc="<https://travis-ci.org/laravel/framework.svg"alt="BuildStatus">>></a>
-<ahref="<https://packagist.org/packages/laravel/framework"><imgsrc="<https://poser.pugx.org/laravel/framework/d/total.svg"alt="TotalDownloads">>></a>
-<ahref="<https://packagist.org/packages/laravel/framework"><imgsrc="<https://poser.pugx.org/laravel/framework/v/stable.svg"alt="LatestStableVersion">>></a>
-<ahref="<https://packagist.org/packages/laravel/framework"><imgsrc="<https://poser.pugx.org/laravel/framework/license.svg"alt="License">>></a>
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## AboutAssignment
+## About Assignment
 
 |Method|URI|Name|Action|Middleware|
 |------|---|----|------|----------|
