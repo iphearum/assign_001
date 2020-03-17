@@ -11,7 +11,6 @@
 
 |Method|URI|Name|Action|Middleware|
 |------|---|----|------|----------|
-|GET-HEAD|/|Closure|web|
 |GET-HEAD|api/post|post.index|App\Http\Controllers\APIs\PostController@index|api|
 |POST|api/post|post.store|App\Http\Controllers\APIs\PostController@store|api|
 |GET-HEAD|api/post/create|post.create|App\Http\Controllers\APIs\PostController@create|api|
@@ -19,7 +18,6 @@
 |PUT|PATCH|api/post/{post}|post.update|App\Http\Controllers\APIs\PostController@update|api|
 |DELETE|api/post/{post}|post.destroy|App\Http\Controllers\APIs\PostController@destroy|api|
 |GET-HEAD|api/post/{post}/edit|post.edit|App\Http\Controllers\APIs\PostController@edit|api|
-|GET-HEAD|api/user||Closure|api,auth:api|
 |GET-HEAD|home|home|App\Http\Controllers\PostController@index|web|
 |GET-HEAD|post|post.index|App\Http\Controllers\PostController@index|web|
 |POST|post|post.store|App\Http\Controllers\PostController@store|web|
