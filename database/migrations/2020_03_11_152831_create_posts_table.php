@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('body');
+            $table->string('image');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('category_id');
             $table->boolean('is_active')->default(true);

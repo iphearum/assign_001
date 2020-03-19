@@ -31,7 +31,8 @@
                     <thead class="text-center">
                     <tr>
                         <th scope="col">N</th>
-                        <th scope="col">title</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Title</th>
                         <th scope="col">Body</th>
                         <th scope="col">Post By</th>
                         <th scope="col">Category</th>
@@ -42,6 +43,9 @@
                     @foreach($posts as $key => $post)
                         <tr>
                             <td>{{ $key }}</td>
+                            <td>
+                                <img src="{{ asset("images/$post->image")}}" alt="" width="60" height="60" srcset="">
+                            </td>
                             <td>{{ $post->title }}</td>
                             <td>{{ substr($post->body,0,50)."..." }}</td>
                             <td>{{ $post->user->name }}</td>
