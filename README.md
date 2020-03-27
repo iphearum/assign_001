@@ -13,7 +13,6 @@
 |------|---|----|------|----------|
 |GET|api/post|post.index|App\Http\Controllers\APIs\PostController@index|api|
 |POST|api/post|post.store|App\Http\Controllers\APIs\PostController@store|api|
-|GET|api/post/create|post.create|App\Http\Controllers\APIs\PostController@create|api|
 |GET|api/post/{post}|post.show|App\Http\Controllers\APIs\PostController@show|api|
 |PUT/PATCH|api/post/{post}|post.update|App\Http\Controllers\APIs\PostController@update|api|
 |DELETE|api/post/{post}|post.destroy|App\Http\Controllers\APIs\PostController@destroy|api|
