@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\APIs;
 
-use App\Category;
 use App\Http\Controllers\Controller;
 use App\Post;
 use Illuminate\Http\Request;
@@ -30,19 +29,19 @@ class PostController extends Controller
             'title' => 'required',
             'body' => 'required'
         ]);
-        if($request->user_id!=0 || $request->user_id!=null){
-            if($request->category_id!=0 || $request->category_id!=null){
+        if ($request->user_id!=0 || $request->user_id!=null) {
+            if ($request->category_id!=0 || $request->category_id!=null) {
                 $request->request->add(['user_id' => $request->user_id,'category_id' => $request->category_id]); //add request
                 $post = Post::create($request->all());
                 return $post;
-            }else{
+            } else {
                 return [
                     'code' => 404,
                     'user' => "Craete by ID ".$request->user_id,
                     'categoty' => "Not found"
                 ];
             }
-        }else{
+        } else {
             return [
                 'code'=>404,
                 'user'=>'Not found'
@@ -70,16 +69,15 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,Post $post)
+    public function update(Request $request, Post $post)
     {
         $post->update($request->all());
-        if($post){
+        if ($post) {
             return [
-                'code'=>200,
+                'code'=>203,
                 'message'=>"Post ID $post->id is up to date!"
             ];
         }
-
     }
 
     /**
@@ -91,9 +89,9 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
-        if($post){
+        if ($post) {
             return [
-                'code'=>200,
+                'code'=>204,
                 'message'=>"Post ID $post->id was deleted from system!",
             ];
         }
