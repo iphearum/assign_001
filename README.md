@@ -9,6 +9,7 @@
 
 ## About Assignment
 
+## Method API
 |Method|URI|Name|Action|Middleware|
 |------|---|----|------|----------|
 |GET|api/post|post.index|App\Http\Controllers\APIs\PostController@index|api|
@@ -17,6 +18,10 @@
 |PUT/PATCH|api/post/{post}|post.update|App\Http\Controllers\APIs\PostController@update|api|
 |DELETE|api/post/{post}|post.destroy|App\Http\Controllers\APIs\PostController@destroy|api|
 |GET|api/post/{post}/edit|post.edit|App\Http\Controllers\APIs\PostController@edit|api|
+
+## Method WEB
+|Method|URI|Name|Action|Middleware|
+|------|---|----|------|----------|
 |GET|home|home|App\Http\Controllers\PostController@index|web|
 |GET|post|post.index|App\Http\Controllers\PostController@index|web|
 |POST|post|post.store|App\Http\Controllers\PostController@store|web|
